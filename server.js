@@ -23,6 +23,10 @@ var router = express.Router();              // get an instance of the express Ro
 router.get('/', function(req, res) {
     var exec = require('child_process').exec;
     var cmd = 'ls -al';
+
+    var cmdConvert = 'convert -density 300 myPDF.pdf  -depth 8 -background white -alpha remove myPDF.tiff'
+    var cmdTesseract = 'tesseract myPDF.tiff out'
+
     var out;
     exec(cmd, function(error, out, stderr) {
       // command output is in stdout
