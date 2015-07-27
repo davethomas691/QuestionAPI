@@ -74,12 +74,42 @@ app.post('/upload', function(req, res) {
                         //spawn = require('child_process').spawn,
                             exec = require('child_process').exec;
 
-                        console.log("uploads/"+filename+".pdf");
-
+                        
                         var inName = "uploads/"+filename+".pdf";
                         var outName = "uploads/"+filename+".tiff";
-                        console.log(['-density', '300', inName, '-depth', '8', '-background', 'white', '-alpha', 'remove', outName]);
-                        convert    = exec('convert', ['-density', '300', inName, '-depth', '8', '-background', 'white', '-alpha', 'remove', outName]);
+                     
+			TwoStep
+
+			//convert    = exec(['convert', '-density', '300', inName, '-depth', '8', '-background', 'white', '-alpha', 'remove', outName]);
+			convert    = exec('convert -density 300 ' + inName + ' -depth 8 -background white -alpha remove ' + outName, function (err, out, code) 	
+			{
+				if (err instanceof Error)
+					throw err;
+				process.stderr.write(err);
+				process.stdout.write(out);
+
+				if (code == 0)
+				{
+					ocr = exec('tesseract uploads/' +filename+ ".tiff out", function (err1, out1, code1) 	
+							{
+								if (err1 instanceof Error)
+									throw err1;
+								process.stderr.write(err1);
+								process.stdout.write(out1);
+                        res.json({ message: out });
+
+                        res.json({'success': true});
+								process.exit(code1);
+
+							}
+					);
+				}
+				process.exit(code);
+			}
+	);
+ 
+/*
+                        //convert    = exec('convert', ['-density', '300', inName, '-depth', '8', '-background', 'white', '-alpha', 'remove', outName]);
                         //convert = exec('pwd');
                         convert.stdout.on('data', function (data) {
                           console.log('Convert stdout: ' + data);
@@ -92,9 +122,8 @@ app.post('/upload', function(req, res) {
                         convert.on('exit', function (code) {
                           console.log('Convert completed: exited with code ' + code);
                         });
-
-                        ocr = exec('tesseract', ["uploads/"+filename+".tiff", 'out'])
-
+*/
+/*
                         ocr.stdout.on('data', function (data) {
                           console.log('Tesseract stdout: ' + data);
                         });
@@ -108,15 +137,13 @@ app.post('/upload', function(req, res) {
                         });
 
 
-
+*/
                         //exec(cmd, function(error, out, stderr) {
                           // command output is in stdout
 
                         //});
 
-                        res.json({ message: out });
 
-                        res.json({'success': true});
                     }
                 });
             });

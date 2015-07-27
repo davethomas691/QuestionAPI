@@ -20,6 +20,7 @@
     "aws-sdk": "*",
     "multipart":"*",
     "formidable":"*",
+    "two-step" : "*",
     "jade": "*"
   }
 }
