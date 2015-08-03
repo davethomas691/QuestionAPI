@@ -8,7 +8,6 @@ var express    = require('express');        // call express
 var app        = express();               // define our app using express
 var bodyParser = require('body-parser');
 var aws = require('aws-sdk');
-var AwsS3Form = require( "aws-s3-form" );
 
 var http = require("http");
 var url = require("url");
