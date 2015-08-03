@@ -41,58 +41,6 @@ var port = process.env.PORT || 8080;        // set our port
 // =============================================================================
 var router = express.Router();              // get an instance of the express Router
 
-// test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-app.get('/process', function(req, res) {
-    //var cmdConvert = 'convert -density 300 myPDF.pdf  -depth 8 -background white -alpha remove myPDF.tiff'
-    //var cmdTesseract = 'tesseract myPDF.tiff out'
-
-    var out;
-
-    var util  = require('util'),
-    //spawn = require('child_process').spawn,
-        exec = require('child_process').exec;
-
-    convert    = exec('convert', ['-density', '300', "/uploads/"+filename+".pdf", '-depth', '8', '-background', 'white', '-alpha', 'remove', "/uploads/"+filename+".tiff"]);
-
-    convert.stdout.on('data', function (data) {
-      console.log('Convert stdout: ' + data);
-    });
-
-    convert.stderr.on('data', function (data) {
-      console.log('Convert stderr: ' + data);
-    });
-
-    convert.on('exit', function (code) {
-      console.log('Convert completed: exited with code ' + code);
-    });
-
-
-
-    ocr = exec('tesseract', ["/uploads/"+filename+".tiff", 'out'])
-
-    ocr.stdout.on('data', function (data) {
-      console.log('Tesseract stdout: ' + data);
-    });
-
-    ocr.stderr.on('data', function (data) {
-      console.log('Tesseract stderr: ' + data);
-    });
-
-    ocr.on('exit', function (code) {
-      console.log('Tesseract completed: exited with code ' + code);
-    });
-
-
-
-    //exec(cmd, function(error, out, stderr) {
-      // command output is in stdout
-
-    //});
-
-    res.json({ message: out });
-
-});
-
 
 app.get('/', function(req, res) {
     res.render("index.html");
@@ -146,8 +94,6 @@ app.post('/upload', function(req, res) {
                           console.log('Convert completed: exited with code ' + code);
                         });
 
-
-/*
                         ocr = exec('tesseract', ["uploads/"+filename+".tiff", 'out'])
 
                         ocr.stdout.on('data', function (data) {
@@ -163,7 +109,7 @@ app.post('/upload', function(req, res) {
                         });
 
 
-*/
+
                         //exec(cmd, function(error, out, stderr) {
                           // command output is in stdout
 
