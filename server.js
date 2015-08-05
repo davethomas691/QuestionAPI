@@ -18,6 +18,8 @@ var fs = require("fs");
 var formidable = require('formidable');
 var fs = require('fs');
 var path = require('path');
+var TwoStep = require("two-step");
+
 
 
 
@@ -27,7 +29,7 @@ app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 var AWS_ACCESS_KEY = "AKIAJC4BTANG4XW4TOMA"; // process.env.AWS_ACCESS_KEY; AKIAJC4BTANG4XW4TOMA
 var AWS_SECRET_KEY = "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"; //process.env.AWS_SECRET_KEY;
@@ -42,12 +44,13 @@ var router = express.Router();              // get an instance of the express Ro
 
 
 app.get('/', function(req, res) {
-    res.render("index.html");
+    res.render("contact.html");
 });
 
 app.post('/upload', function(req, res) {
     var form = new formidable.IncomingForm();
-    form.parse(req, function(err, fields, files) {
+    form.parse(req, function(err, fields, files)
+    {
         // `file` is the name of the <input> field of type `file`
         var old_path = files.file.path,
             file_size = files.file.size,
@@ -56,9 +59,12 @@ app.post('/upload', function(req, res) {
             file_name = old_path.substr(index),
             new_path = path.join(process.env.PWD, '/uploads/', file_name + '.' + file_ext);
 
-        fs.readFile(old_path, function(err, data) {
-            fs.writeFile(new_path, data, function(err) {
-                fs.unlink(old_path, function(err) {
+        fs.readFile(old_path, function(err, data)
+        {
+            fs.writeFile(new_path, data, function(err)
+            {
+                fs.unlink(old_path, function(err)
+                {
                     if (err)
                     {
                         res.status(500);
@@ -72,76 +78,69 @@ app.post('/upload', function(req, res) {
                         var filename = file_name;
                         var util  = require('util'),
                         //spawn = require('child_process').spawn,
-                            exec = require('child_process').exec;
+                            exec = require('child_process').execSync;
 
-                        
                         var inName = "uploads/"+filename+".pdf";
                         var outName = "uploads/"+filename+".tiff";
-                     
-			TwoStep
 
-			//convert    = exec(['convert', '-density', '300', inName, '-depth', '8', '-background', 'white', '-alpha', 'remove', outName]);
-			convert    = exec('convert -density 300 ' + inName + ' -depth 8 -background white -alpha remove ' + outName, function (err, out, code) 	
-			{
-				if (err instanceof Error)
-					throw err;
-				process.stderr.write(err);
-				process.stdout.write(out);
 
-				if (code == 0)
-				{
-					ocr = exec('tesseract uploads/' +filename+ ".tiff out", function (err1, out1, code1) 	
-							{
-								if (err1 instanceof Error)
-									throw err1;
-								process.stderr.write(err1);
-								process.stdout.write(out1);
-                        res.json({ message: out });
+                  			TwoStep(
+                          function convert() {
+                              var done = false;
+                              convert    = exec('convert -monitor -density 300 ' + inName + ' -depth 8 -background white -alpha remove ' + outName,
+                                              function (err, out, code)
+                                              {
+                                                if (err instanceof Error)
+                                                  throw err;
+                                                process.stderr.write(err);
+                                                process.stdout.write(out);
 
-                        res.json({'success': true});
-								process.exit(code1);
+                                                done = true;
+                                                process.exit(code);
+                                              }
+                                          );
 
-							}
-					);
-				}
-				process.exit(code);
-			}
-	);
- 
-/*
-                        //convert    = exec('convert', ['-density', '300', inName, '-depth', '8', '-background', 'white', '-alpha', 'remove', outName]);
-                        //convert = exec('pwd');
-                        convert.stdout.on('data', function (data) {
-                          console.log('Convert stdout: ' + data);
+
+                          },
+                          function ocr() {
+
+                              ocr = exec('tesseract ' + outName + " out",
+                                              function (err1, out1, code1)
+                                              {
+                                                if (err1 instanceof Error)
+                                                  throw err1;
+                                                process.stderr.write(err1);
+                                                process.stdout.write(out1);
+
+                                                process.exit(code1);
+
+                                              }
+                              );
+                          },
+                          function python() {
+                              python = exec('python main.py',
+                                              function (err1, out1, code1)
+                                              {
+                                                if (err1 instanceof Error)
+                                                  throw err1;
+                                                process.stderr.write(err1);
+                                                process.stdout.write(out1);
+                                                process.exit(code1);
+
+                                              }
+                              );
+                          }
+                        );
+
+                        var fs = require('fs'),
+                          filename = "pyout.txt";
+
+                        fs.readFile(filename, 'utf8', function(err, data) {
+                          if (err) throw err;
+                          console.log('OK: ' + filename);
+                          console.log(data)
+                          res.json({'questions': data});
                         });
-
-                        convert.stderr.on('data', function (data) {
-                          console.log('Convert stderr: ' + data);
-                        });
-
-                        convert.on('exit', function (code) {
-                          console.log('Convert completed: exited with code ' + code);
-                        });
-*/
-/*
-                        ocr.stdout.on('data', function (data) {
-                          console.log('Tesseract stdout: ' + data);
-                        });
-
-                        ocr.stderr.on('data', function (data) {
-                          console.log('Tesseract stderr: ' + data);
-                        });
-
-                        ocr.on('exit', function (code) {
-                          console.log('Tesseract completed: exited with code ' + code);
-                        });
-
-
-*/
-                        //exec(cmd, function(error, out, stderr) {
-                          // command output is in stdout
-
-                        //});
 
 
                     }
