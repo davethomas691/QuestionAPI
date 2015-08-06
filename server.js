@@ -133,7 +133,7 @@ app.post('/upload', function(req, res) {
                         );
 
                         var fs = require('fs'),
-                          filename = "pyout.txt";
+                        filename = "pyout.txt";
 
                         fs.readFile(filename, 'utf8', function(err, data)
                         {
@@ -152,8 +152,8 @@ app.post('/upload', function(req, res) {
                           //console.log(html);
 
                           //res.render(html);
-                          res.send(JSON.stringify(data, null, 3));
-                          //res.json(data);
+                          //res.send(JSON.stringify(data, null, 3));
+                          res.json(data);
                         });
 
 

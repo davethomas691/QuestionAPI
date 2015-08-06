@@ -1,34 +1,34 @@
-{"answer": "following", "a": "mom", "c": "be", "b": "have", "question": "What does following mean in the following sentence?\nRead the following section from the story:   [Mia   s mother] explained that they didn   t have online search engines to help them withtheir work; they could only rely on books."}
-{"answer": "passage", "a": "mom", "c": "t", "b": "t", "question": "What does passage mean in the following sentence?\nAs used in the passage, what does the phrase    pitch in    mean?sac      cehemsuffercookUOW>7."}
-{"answer": "think", "a": "pitch", "c": "think", "b": "t", "question": "What does think mean in the following sentence?\nshe asked, wondering what they were thinking."}
-{"answer": "pitch", "a": "were", "c": "mom", "b": "think", "question": "What does pitch mean in the following sentence?\nAlso, since I had many brothers and sisters, we had to pitch in more."}
-{"answer": "rich_person", "a": "have", "c": "be", "b": "passage", "question": "What does have mean in the following sentence?\nI have to design a website page for mycomputer class."}
-{"answer": "know", "a": "was", "c": "was", "b": "had", "question": "What does know mean in the following sentence?\nWhen we were in middle school,we didn't even know how to use computers."}
-{"answer": "be", "a": "were", "c": "have", "b": "said", "question": "What does were mean in the following sentence?\nWhen we were in middle school,we didn't even know how to use computers."}
-{"answer": "state", "a": "had", "c": "think", "b": "t", "question": "What does said mean in the following sentence?\nMia said."}
-{"answer": "make", "a": "t", "c": "know", "b": "was", "question": "What does made mean in the following sentence?\nBased on this evidence, what conclusion can be made?UOW>Mia thinks new technology makes homework easier.Mia   s parents think that her homework is too easy.Mia thinks it would be more fun to work with a partner.Mia   s parents think she should have a cell phone.4."}
-{"answer": "have", "a": "was", "c": "have", "b": "had", "question": "What does had mean in the following sentence?\nIt had been a long week-she was working on a computer project and had stayed late at school to finish her work."}
-{"answer": "2 3 4 1 ", "a": "3 1 2 4 ", "c": "3 2 4 1 ", "b": "1 2 4 3 ", "question": "Identify the correct order for the following sentences: 1: Mrs. Murphy shouted from the living room.\n2: \"But we didn't have computers back then, so we had to go to the libraryevery day to do research!\n3: What is this story mainly about?a conversation about generational differencesa conversation about the evils of technologya conversation about how Mia   s parents meta conversation about devices that are popular with teensUOW>6.\n4: Read the following sentences:    Mrs. Murphy started to list off things she didn   t haveas a child, like an mp3 player and a flat-screen television.\n"}
-{"answer": "1 3 4 2 ", "a": "3 2 1 4 ", "c": "3 4 2 1 ", "b": "4 3 1 2 ", "question": "Identify the correct order for the following sentences: 1: This project is taking me forever!\n2: I helped my mom cook dinner, and werepaired our clothes ourselves when they tore,    she said, tapping Mia on the nose.\n3: Choose the answer that best completes the sentence below.Mia and her parents think that technology has made life easier for students today asthey complete their homework.\n4: Read the following sentences:    Mrs. Murphy started to list off things she didn   t have as a child, like anmp3 player and a flat   screen television.\n"}
-{"answer": "time_unit", "a": "leap_second", "c": "together", "b": "computers", "question": "A(n) s is an example of a ____________."}
-{"answer": "parent", "a": "puerpera", "c": "work", "b": "surrogate_mother", "question": "A(n) mother is an example of a ____________."}
-{"answer": "activity", "a": "loose_end", "c": "coursework", "b": "operation", "question": "A(n) work is an example of a ____________."}
-{"answer": "genitor", "a": "mother", "c": "stepparent", "b": "story", "question": "A(n) parents is an example of a ____________."}
-{"answer": "work", "a": "no-brainer", "c": "adventure", "b": "cinch", "question": "A(n) project is an example of a ____________."}
-{"answer": "activity", "a": "hand", "c": "project", "b": "thanks", "question": "A(n) help is an example of a ____________."}
-{"answer": "message", "a": "sob_story", "c": "fairytale", "b": "tall_tale", "question": "A(n) story is an example of a ____________."}
-{"answer": "speech", "a": "gossiping", "c": "exchange", "b": "crossfire", "question": "A(n) conversation is an example of a ____________."}
-{"answer": "machine", "a": "pari-mutuel_machine", "c": "number_cruncher", "b": "cell", "question": "A(n) Computers is an example of a ____________."}
-{"answer": "school_assignment", "a": "parents", "c": "parents", "b": "dinner", "question": "A(n) homework is an example of a ____________."}
-{"answer": "educational_institution", "a": "public_school", "c": "work", "b": "day_school", "question": "A(n) school is an example of a ____________."}
-{"answer": "abstraction", "a": "states'_rights", "c": "right_of_way", "b": "right_of_search", "question": "A(n) rights is an example of a ____________."}
-{"answer": "being", "a": "school", "c": "together", "b": "life", "question": "A(n) life is an example of a ____________."}
-{"answer": "skilled_worker", "a": "Computers", "c": "chef", "b": "preserver", "question": "A(n) cook is an example of a ____________."}
-{"answer": "compartment", "a": "story", "c": "cell", "b": "project", "question": "A(n) cell is an example of a ____________."}
-{"answer": "party", "a": "evidence", "c": "homework", "b": "school", "question": "A(n) do is an example of a ____________."}
-{"answer": "information", "a": "proof", "c": "probable_cause", "b": "symptom", "question": "A(n) evidence is an example of a ____________."}
-{"answer": "MineCraft", "a": "Penguins", "c": "Guardians of the Galaxy", "b": "Star Wars", "question": "What or who is the main subject of the article?"}
-{"answer": "NN", "a": "Noun", "c": "Verb", "b": "Adjective", "question": "What part of speech is \"be\" in the following sentence:\nIt had been a long week-she was working on a computer project and had stayed late at school to finish her work."}
-{"answer": "NN", "a": "Noun", "c": "Verb", "b": "Adjective", "question": "What part of speech is \"know\" in the following sentence:\nWhen we were in middle school,we didn't even know how to use computers."}
-{"answer": "NN", "a": "Noun", "c": "Verb", "b": "Adjective", "question": "What part of speech is \"mom\" in the following sentence:\nBut I have that project to thank for meeting your mom!"}
-{"answer": "NN", "a": "Noun", "c": "Verb", "b": "Adjective", "question": "What part of speech is \"made\" in the following sentence:\nBased on this evidence, what conclusion can be made?UOW>Mia thinks new technology makes homework easier.Mia   s parents think that her homework is too easy.Mia thinks it would be more fun to work with a partner.Mia   s parents think she should have a cell phone.4."}
+{"answer": "following", "a": "made", "c": "was", "b": "said", "question": "What does following mean in the following sentence?\nRead the following section from the story:   [Mia   s mother] explained that they didn   t have online search engines to help them withtheir work; they could only rely on books."}
+{"answer": "think", "a": "pitch", "c": "pitch", "b": "said", "question": "What does think mean in the following sentence?\nshe asked, wondering what they were thinking."}
+{"answer": "pitch", "a": "made", "c": "said", "b": "were", "question": "What does pitch mean in the following sentence?\nAlso, since I had many brothers and sisters, we had to pitch in more."}
+{"answer": "rich_person", "a": "have", "c": "was", "b": "did", "question": "What does have mean in the following sentence?\nI have to design a website page for mycomputer class."}
+{"answer": "know", "a": "had", "c": "was", "b": "were", "question": "What does know mean in the following sentence?\nWhen we were in middle school,we didn't even know how to use computers."}
+{"answer": "be", "a": "have", "c": "was", "b": "did", "question": "What does were mean in the following sentence?\nWhen we were in middle school,we didn't even know how to use computers."}
+{"answer": "state", "a": "made", "c": "think", "b": "had", "question": "What does said mean in the following sentence?\nMia said."}
+{"answer": "make", "a": "know", "c": "did", "b": "be", "question": "What does made mean in the following sentence?\nBased on this evidence, what conclusion can be made?UOW>Mia thinks new technology makes homework easier.Mia   s parents think that her homework is too easy.Mia thinks it would be more fun to work with a partner.Mia   s parents think she should have a cell phone.4."}
+{"answer": "have", "a": "said", "c": "had", "b": "know", "question": "What does had mean in the following sentence?\nIt had been a long week   she was working on a computer project and had stayed late at school to finish her work."}
+{"answer": "Washington", "a": "was", "c": "did", "b": "were", "question": "What does was mean in the following sentence?\nReadworks Computers vs. BooksCom puters vs. BooksMia Murphy was tired when she got home from school last Friday."}
+{"answer": "3 2 4 1 ", "a": "4 1 2 3 ", "c": "2 4 3 1 ", "b": "3 2 1 4 ", "question": "Identify the correct order for the following sentences: 1: How about something that you used to make as a kid?\n2: What is one way that Mia   s life is different from her mother   s?\n3: They didn   t have cell phones to text each other when they needed help   theyhad to work together at each other   s houses.\n4: How do you know?\n"}
+{"answer": "2 4 3 1 ", "a": "3 1 4 2 ", "c": "4 3 2 1 ", "b": "1 3 4 2 ", "question": "Identify the correct order for the following sentences: 1: Mrs. Murphy chimed in.\n2: Mia said.\n3: Why does Mia   s mother think her computer class homework is    fancy   ?\n4: and Mrs. Murphy grew annoyed with each other while working on their project.Mr.\n"}
+{"answer": "time_unit", "a": "project", "c": "do", "b": "ReadWorks", "question": "A(n) s is an example of a ____________."}
+{"answer": "parent", "a": "didn", "c": "supermom", "b": "quintipara", "question": "A(n) mother is an example of a ____________."}
+{"answer": "activity", "a": "timework", "c": "job", "b": "loose_end", "question": "A(n) work is an example of a ____________."}
+{"answer": "genitor", "a": "filicide", "c": "mother", "b": "father", "question": "A(n) parents is an example of a ____________."}
+{"answer": "work", "a": "baby", "c": "labor_of_love", "b": "tall_order", "question": "A(n) project is an example of a ____________."}
+{"answer": "activity", "a": "mother", "c": "relief", "b": "lift", "question": "A(n) help is an example of a ____________."}
+{"answer": "message", "a": "computers", "c": "cook", "b": "sob_story", "question": "A(n) story is an example of a ____________."}
+{"answer": "speech", "a": "telephone_conversation", "c": "crossfire", "b": "colloquy", "question": "A(n) conversation is an example of a ____________."}
+{"answer": "machine", "a": "school", "c": "pari-mutuel_machine", "b": "analog_computer", "question": "A(n) Computers is an example of a ____________."}
+{"answer": "school_assignment", "a": "dinner", "c": "story", "b": "dinner", "question": "A(n) homework is an example of a ____________."}
+{"answer": "educational_institution", "a": "conservatory", "c": "alma_mater", "b": "grade_school", "question": "A(n) school is an example of a ____________."}
+{"answer": "abstraction", "a": "cell", "c": "floor", "b": "due", "question": "A(n) rights is an example of a ____________."}
+{"answer": "being", "a": "project", "c": "story", "b": "ghetto", "question": "A(n) life is an example of a ____________."}
+{"answer": "skilled_worker", "a": "seasoner", "c": "roaster", "b": "passage", "question": "A(n) cook is an example of a ____________."}
+{"answer": "compartment", "a": "middle", "c": "school", "b": "project", "question": "A(n) cell is an example of a ____________."}
+{"answer": "party", "a": "work", "c": "mother", "b": "homework", "question": "A(n) do is an example of a ____________."}
+{"answer": "information", "a": "proof", "c": "disproof", "b": "dinner", "question": "A(n) evidence is an example of a ____________."}
+{"answer": "MineCraft", "a": "Star Wars", "c": "Penguins", "b": "Guardians of the Galaxy", "question": "What or who is the main subject of the article?"}
+{"answer": "NN", "a": "Noun", "c": "Verb", "b": "Adjective", "question": "What part of speech is \"help\" in the following sentence:\nShe asked her daughter if she had anyone to help her with her project."}
+{"answer": "NN", "a": "Noun", "c": "Verb", "b": "Adjective", "question": "What part of speech is \"thinks\" in the following sentence:\nBased on this evidence, what conclusion can be made?UOW>Mia thinks new technology makes homework easier.Mia   s parents think that her homework is too easy.Mia thinks it would be more fun to work with a partner.Mia   s parents think she should have a cell phone.4."}
+{"answer": "NNS", "a": "Noun", "c": "Verb", "b": "Adjective", "question": "What part of speech is \"s\" in the following sentence:\nReadworks Computers vs. BooksCom puters vs. BooksMia Murphy was tired when she got home from school last Friday."}
+{"answer": "NN", "a": "Noun", "c": "Verb", "b": "Adjective", "question": "What part of speech is \"had\" in the following sentence:\nIt had been a long week   she was working on a computer project and had stayed late at school to finish her work."}
