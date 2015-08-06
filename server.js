@@ -141,9 +141,9 @@ app.post('/upload', function(req, res) {
                           console.log('OK: ' + filename);
                           console.log(data)
 
-                          var json2html = require('node-json2html');
+                          //var json2html = require('node-json2html');
 
-                          var transform = {'tag':'div','html':'${question} - ${answer} - ${a} - ${b} - ${c}'};
+                          //var transform = {'tag':'div','html':'${question} - ${answer} - ${a} - ${b} - ${c}'};
 
                           //var html = json2html.transform(data,transform);
 
