@@ -135,11 +135,25 @@ app.post('/upload', function(req, res) {
                         var fs = require('fs'),
                           filename = "pyout.txt";
 
-                        fs.readFile(filename, 'utf8', function(err, data) {
+                        fs.readFile(filename, 'utf8', function(err, data)
+                        {
                           if (err) throw err;
                           console.log('OK: ' + filename);
                           console.log(data)
-                          res.json({'questions': data});
+
+                          var json2html = require('node-json2html');
+
+                          var transform = {'tag':'div','html':'${question} - ${answer} - ${a} - ${b} - ${c}'};
+
+                          //var html = json2html.transform(data,transform);
+
+
+
+                          //console.log(html);
+
+                          //res.render(html);
+                          res.send(JSON.stringify(data, null, 3));
+                          //res.json(data);
                         });
 
 

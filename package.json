@@ -21,6 +21,7 @@
     "multipart":"*",
     "formidable":"*",
     "two-step" : "*",
+    "node-json2html" : "*",
     "jade": "*"
   }
 }
