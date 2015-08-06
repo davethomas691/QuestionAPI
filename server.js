@@ -117,7 +117,7 @@ app.post('/upload', function(req, res) {
                                               }
                               );
                           },
-                          function python() {
+                          function python1() {
                               python = exec('python main.py',
                                               function (err1, out1, code1)
                                               {
